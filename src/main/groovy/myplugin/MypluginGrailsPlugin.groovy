@@ -1,5 +1,6 @@
 package myplugin
 
+import commandObjects.Booty
 import grails.plugins.*
 
 class MypluginGrailsPlugin extends Plugin {
@@ -42,7 +43,34 @@ Brief summary/description of the plugin.
 
     Closure doWithSpring() {
         { ->
-
+//            println ""
+//            println ""
+//            println ""
+//            println ""
+//            println "called do With Spring "
+//            println ""
+//            println ""
+//            println ""
+//            println ""
+//            println ""
+////            booty(Booty)
+//            List<String> carNames = ['Ferrari', 'C-class', 'Mercides', 'Duster', 'Wagon-R']
+//            Long amount = 250000
+//            if (Car.count() < 1) {
+//                carNames.each { name ->
+//                    Car car = new Car(name: name, amount: amount)
+//                    car.save()
+//                    println "******* Creating Car ${name} *******"
+//                    amount = amount + 25000
+//                }
+//            }
+//            println "   "
+//            println "Booty called"
+//            println ""
+//            println "BootStrap"
+//            println ""
+//            println "Booty End"
+//            println ""
         }
     }
 

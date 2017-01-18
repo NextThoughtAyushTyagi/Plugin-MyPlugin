@@ -22,17 +22,16 @@ class CarController {
                 Car exists = Car.findByName(params.name)
                 if (!exists) {
                     car.name = params.name
-                    car.amount = amount as Long
-                    car.save(flush: true)
-                    flash.message = "Car details updated successfully ! "
-                    if (carPicUpload.validate()) {
-                        carService.carPictureUpload(carPicUpload?.carPic, car)
-                    } else {
-                        flash.error = "Image format is not supported"
-                    }
-                } else {
-                    flash.error = "Car already exists with name '${params.name}' ! "
                 }
+                car.amount = amount as Long
+                car.save(flush: true)
+                flash.message = "Car details updated successfully ! "
+                if (carPicUpload.validate()) {
+                    carService.carPictureUpload(carPicUpload?.carPic, car)
+                } else {
+                    flash.error = "Image format is not supported"
+                }
+
             }
         } else if (params.url.equals("createCar")) {
             Car exists = Car.findByName(params.name)

@@ -45,7 +45,7 @@
                                         <td id="car_name_${car.uuid}">${car?.name ?: '-'}</td>
                                         <td id="car_amount_${car.uuid}">${car?.amount ?: '0'}</td>
                                         <td id="car_picture_${car.uuid}">
-                                            <img src="${createLink(controller: 'admin', action: 'showCarPic', params: [uuid: car?.uuid])}"
+                                            <img src="${createLink(controller: 'public', action: 'showCarPic', params: [uuid: car?.uuid])}"
                                                  width="50" height="50" onclick='showFullSizePicture("${car?.uuid}")'
                                                  alt="" class="profile-img img-responsive">
                                         </td>
@@ -116,7 +116,7 @@
     });
     function showFullSizePicture(uuid) {
         $.ajax({
-            url: "${createLink(controller:'admin',action: 'showFullSizeCarPicture')}",
+            url: "${createLink(controller:'public',action: 'showFullSizeCarPicture')}",
             data: {uuid: uuid},
             success: function (data) {
                 $("#pictureShow").html(data.template);
